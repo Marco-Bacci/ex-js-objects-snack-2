@@ -9,15 +9,37 @@
 // // é stato creato un oggetto 
 
 // question 2 ---------------------------------------
+// const hamburger = { 
+// 	name: "Cheese Burger", 
+// 	weight: 250,
+// 	ingredients: ["Cheese", "Meat", "Bread", "Tomato"]
+// };
+
+// const secondBurger = {...hamburger};
+// secondBurger.ingredients[0] = "Salad";
+
+// console.log(hamburger.ingredients[0]); // Salad
+// console.log(secondBurger.ingredients[0]); // Salad
+// //  sono stati creati 3 oggetti
+
+
+// question 3 ---------------------------------------
+
 const hamburger = { 
 	name: "Cheese Burger", 
 	weight: 250,
-	ingredients: ["Cheese", "Meat", "Bread", "Tomato"]
+	maker: {
+		name: "Anonymous Chef",
+		restaurant: {
+			name: "Hyur's Burgers",
+			address: "Main Street, 123",
+			isOpen: true,
+		},
+		age: 29
+	}
 };
 
-const secondBurger = {...hamburger};
-secondBurger.ingredients[0] = "Salad";
+const secondBurger = structuredClone(hamburger);
+const thirdBurger = structuredClone(hamburger);
+//  sono stati creati 9 oggetti
 
-console.log(hamburger.ingredients[0]); // Salad
-console.log(secondBurger.ingredients[0]); // Salad
-//  sono stati creati 3 oggetti
